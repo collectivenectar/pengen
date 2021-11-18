@@ -5,6 +5,8 @@ var canvas = new fabric.Canvas("canvas", {
 });
 var currentBrushSize = 0;
 
+var userDrawing = {}
+
 canvas.setHeight(400);
 canvas.setWidth(500);
 
@@ -43,6 +45,18 @@ function decrease_brush_size(){
     currentBrushSize -= 10;
     var brush = canvas.freeDrawingBrush;
     brush.width -= 10;
+}
+
+function saveDrawing() {
+    userDrawing = canvas.toJSON() 
+}
+
+function loadDrawing() {
+    if (!userDrawing) {
+        console.log('there is no drawing saved!');
+    } else {
+        canvas.loadFromJSON(userDrawing);
+    }
 }
 
 
