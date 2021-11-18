@@ -1,36 +1,46 @@
-const canvas = document.getElementById("canvas");
-canvas.width = window.innerWidth - 60;
-canvas.height = 400;
+var $ = function(id){return document.getElementById(id)};
 
-let context = canvas.getContext("2d");
-context.fillStyle = "white";
-context.fillRect(0, 0, canvas.width, canvas.height);
+var canvas = new fabric.Canvas("canvas", {
+    isDrawingMode: true
+});
+var currentBrushSize = 0;
 
-let draw_color = "black";
-let draw_width = "2";
-let drawing = false;
+canvas.setHeight(400);
+canvas.setWidth(500);
 
-canvas.addEventListener("touchstart", start, false);
-canvas.addEventListener("touchmove", draw, false);
-canvas.addEventListener("mousedown", start, false);
-canvas.addEventListener("mousemove", draw, false);
-
-function start(event) {
-    is_drawing = true;
-    context.beginPath();
-    context.moveTo(event.clientX + canvas.offsetLeft, 
-        event.clientY - canvas.offsetTop)
-    event.preventDefault();
+function brushRed(){
+    var brush = canvas.freeDrawingBrush;
+    brush.color = "Red";
 }
-
-function draw(event){
-    if (is_drawing){
-        context.lineTo(event.clientX + canvas.offsetLeft,
-            event.clientY - canvas.offsetTop);
-        context.strokeStyle = draw_color;
-        context.lineWidth = draw_width;
-        context.lineCap = "round";
-        context.lineJoin = "round";
-        context.stroke();
+function brushOrange(){
+    var brush = canvas.freeDrawingBrush;
+    brush.color = "Orange";
+}
+function brushYellow(){
+    var brush = canvas.freeDrawingBrush;
+    brush.color = "Yellow";
+}
+function brushGreen(){
+    var brush = canvas.freeDrawingBrush;
+    brush.color = "Green";
+}
+function brushBlue(){
+    var brush = canvas.freeDrawingBrush;
+    brush.color = "Blue";
+}
+function increase_brush_size(){
+    if (currentBrushSize == 100){
+        return
     }
+    currentBrushSize += 10;
+    var brush = canvas.freeDrawingBrush;
+    brush.width += 10;
+}
+function decrease_brush_size(){
+    if(currentBrushSize == 10){
+        return
+    }
+    currentBrushSize -= 10;
+    var brush = canvas.freeDrawingBrush;
+    brush.width -= 10;
 }
