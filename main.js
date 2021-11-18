@@ -44,3 +44,5 @@ function decrease_brush_size(){
     var brush = canvas.freeDrawingBrush;
     brush.width -= 10;
 }
+
+
