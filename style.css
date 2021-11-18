@@ -3,10 +3,7 @@
     flex-direction: row;
 }
 #canvas{
-    height: 400px;
-    width: 500px;
     box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
-    display:block;
 }
 #canvas-tools{
     display: flex;
