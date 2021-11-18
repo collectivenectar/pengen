@@ -2,6 +2,7 @@
   <head>
     <title>Pengen</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/fabric@4.6.0/dist/fabric.min.js"></script>
 </head>
 <body>
   <div class="workspace">
@@ -9,16 +10,16 @@
     </canvas>
     <div id="canvas-tools">
       <div id="buttons-field">
-        <button type="button" class="button">eraser</button>
-        <button type="button" class="button">undo</button>
-        <button type="button" class="button">start over</button>
+        <button type="button" onClick="increase_brush_size()" id="increase_brush_size" class="button">larger</button>
+        <button type="button" onClick="decrease_brush_size()" id="decrease_brush_size" class="button">smaller</button>
+        <button type="button" onClick="clear()" class="button">start over</button>
       </div>
       <div id="colors-field">
-        <div id="color" style="background-color: red;"></div>
-        <div id="color" style="background-color: orange;"></div>
-        <div id="color" style="background-color: yellow;"></div>
-        <div id="color" style="background-color: green;"></div>
-        <div id="color" style="background-color: blue;"></div>
+        <div onClick="brushRed()" id="color" style="background-color: #FF0000"></div>
+        <div onClick="brushOrange()" id="color" style="background-color: orange;"></div>
+        <div onClick="brushYellow()" id="color" style="background-color: yellow;"></div>
+        <div onClick="brushGreen()" id="color" style="background-color: green;"></div>
+        <div onClick="brushBlue()" id="color" style="background-color: blue;"></div>
       </div>
     </div>
   </div>
@@ -27,3 +28,4 @@
 </script>
 
 </html>
+
