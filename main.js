@@ -1,55 +1,33 @@
-var $ = function(id){return document.getElementById(id)};
-
 var canvas = new fabric.Canvas("canvas", {
     isDrawingMode: true
 });
-var currentBrushSize = 0;
 
+var currentBrushSize = 5;
+
+var colorPicker = new iro.ColorPicker("#picker", {
+    width: 100,
+    color: "#AAA"
+})
+
+var hex = colorPicker.color.hexString;
 var userDrawing = {}
 
+//Setting canvas dimensions
 canvas.setHeight(400);
 canvas.setWidth(500);
 
-function brushRed(){
+
+//When colorPicker has been used to change color, update brush color
+colorPicker.on('color:change', function(color) {
     var brush = canvas.freeDrawingBrush;
-    brush.color = "Red";
-}
-function brushOrange(){
+    brush.color = color.hexString;
+  });
+
+
+function change_brush_size(slider_value){
+    //When brush size slider is used, update brush size
     var brush = canvas.freeDrawingBrush;
-    brush.color = "Orange";
-}
-function brushYellow(){
-    var brush = canvas.freeDrawingBrush;
-    brush.color = "Yellow";
-}
-function brushGreen(){
-    var brush = canvas.freeDrawingBrush;
-    brush.color = "Green";
-}
-function brushBlue(){
-    var brush = canvas.freeDrawingBrush;
-    brush.color = "Blue";
-}
-function increase_brush_size(){
-    if (currentBrushSize >= 100){
-        return
-    }
-    else if (currentBrushSize = 5){
-        currentBrushSize == 10;
-    }
-    currentBrushSize += 10;
-    var brush = canvas.freeDrawingBrush;
-    brush.width += 10;
-}
-function decrease_brush_size(){
-    if(currentBrushSize <= 10){
-        currentBrushSize == 5;
-        var brush = canvas.freeDrawingBrush;
-        brush.width -= 5;
-    }
-    currentBrushSize -= 10;
-    var brush = canvas.freeDrawingBrush;
-    brush.width -= 10;
+    brush.width = parseInt(slider_value, 10) || 1;
 }
 
 function saveDrawing() {

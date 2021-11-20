@@ -2,6 +2,7 @@
   <head>
     <title>Pengen</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
   <script src="https://unpkg.com/fabric@4.6.0/dist/fabric.min.js"></script>
 </head>
 <body>
@@ -10,8 +11,6 @@
     </canvas>
     <div id="canvas-tools">
       <div id="buttons-field">
-        <button type="button" onClick="increase_brush_size()" id="increase_brush_size" class="button">larger</button>
-        <button type="button" onClick="decrease_brush_size()" id="decrease_brush_size" class="button">smaller</button>
         <button type="button" onClick="canvas.clear()" class="button">start over</button>
         <button type="button" onClick="saveDrawing()" class="button">save</button>
         <select name="drawings" onchange="loadFromSelector(this.value)" id="drawings">
@@ -19,12 +18,10 @@
         </select>
       </div>
       <div id="colors-field">
-        <div onClick="brushRed()" id="color" style="background-color: #FF0000"></div>
-        <div onClick="brushOrange()" id="color" style="background-color: orange;"></div>
-        <div onClick="brushYellow()" id="color" style="background-color: yellow;"></div>
-        <div onClick="brushGreen()" id="color" style="background-color: green;"></div>
-        <div onClick="brushBlue()" id="color" style="background-color: blue;"></div>
-        <div onClick="brushBlack()" id="color" style="background-color: black;"></div>
+        <div id="picker"></div>
+      </div>
+      <div id="brush-size-field">
+        <input oninput="change_brush_size(this.value)" type="range" min="1" max="100" value="5" class="slider" id="brush-size-slider">
       </div>
     </div>
   </div>
