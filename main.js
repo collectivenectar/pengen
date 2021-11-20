@@ -31,16 +31,21 @@ function brushBlue(){
     brush.color = "Blue";
 }
 function increase_brush_size(){
-    if (currentBrushSize == 100){
+    if (currentBrushSize >= 100){
         return
+    }
+    else if (currentBrushSize = 5){
+        currentBrushSize == 10;
     }
     currentBrushSize += 10;
     var brush = canvas.freeDrawingBrush;
     brush.width += 10;
 }
 function decrease_brush_size(){
-    if(currentBrushSize == 10){
-        return
+    if(currentBrushSize <= 10){
+        currentBrushSize == 5;
+        var brush = canvas.freeDrawingBrush;
+        brush.width -= 5;
     }
     currentBrushSize -= 10;
     var brush = canvas.freeDrawingBrush;

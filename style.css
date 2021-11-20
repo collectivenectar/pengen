@@ -8,30 +8,49 @@
 #canvas-tools{
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
-    background-color:lightgray;
+    background-color: white;
     cursor: pointer;
 }
 #buttons-field{
     display: flex;
     flex-direction: column;
-    width: 80px;
-    box-shadow: 0 1px 5px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 5px rgba(0.0, 0.0, 0.0, 0.40);
+    width: 110px;
+    margin-bottom: 10px;
+
 }
 .button{
+    font-variant: small-caps;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 5px;
-    cursor: pointer
+    opacity: 70%;
+    cursor: pointer;
+    background-color: white;
+    border-color: white;
+    box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+}
+#drawings{
+    height: 30px;
+    opacity: 70%;
+    background-color: white;
+    border-color: white;
+    font-variant:small-caps;
+    box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+
 }
 #colors-field{
-    display: flex;
-    flex-direction: column;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 40px 40px;
 }
 #color{
-    width: 40px;
-    height: 40px;
-    margin-bottom: 5px;
-    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    opacity: 80%;
+    margin-bottom: 3px;
+    margin-top: 5px;
     border-radius: 50%;
     cursor: pointer;
+    box-shadow: 0 1px 5px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 5px rgba(0.0, 0.0, 0.0, 0.40);
 }

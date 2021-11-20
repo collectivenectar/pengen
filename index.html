@@ -14,7 +14,9 @@
         <button type="button" onClick="decrease_brush_size()" id="decrease_brush_size" class="button">smaller</button>
         <button type="button" onClick="canvas.clear()" class="button">start over</button>
         <button type="button" onClick="saveDrawing()" class="button">save</button>
-        <button type="button" onClick="loadDrawing()" class="button">load</button>
+        <select name="drawings" onchange="loadFromSelector(this.value)" id="drawings">
+          <option value="" selected disabled>load</option>
+        </select>
       </div>
       <div id="colors-field">
         <div onClick="brushRed()" id="color" style="background-color: #FF0000"></div>
@@ -22,14 +24,9 @@
         <div onClick="brushYellow()" id="color" style="background-color: yellow;"></div>
         <div onClick="brushGreen()" id="color" style="background-color: green;"></div>
         <div onClick="brushBlue()" id="color" style="background-color: blue;"></div>
+        <div onClick="brushBlack()" id="color" style="background-color: black;"></div>
       </div>
     </div>
-  </div>
-
-  <div id="drawing-selector">
-    <select name="drawings" onchange="loadFromSelector(this.value)" id="drawings">
-      <option value="" selected disabled>load a drawing</option>
-    </select>
   </div>
 </body>
 <script src="main.js">
