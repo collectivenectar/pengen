@@ -1,17 +1,26 @@
-  #title {
+ #title {
     font-size: 40px;
     text-align: center;
+    font-color: "gray";
   }
-
-  #description {
+  body{
+    background: url("https://cdn.pixabay.com/photo/2014/09/19/12/30/pencils-452238_1280.jpg")
+  }
+#description {
     font-size: 20px;
     display: block;
     text-align: center;
   }
-  body{
-    background-color: lightblue;
-  }
-
+#app-features{
+  padding: 20px;
+  display: block;
+  text-align: center;
+}
+#features-list{
+  display:block;
+  list-style-type: none;
+  text-align: center;
+}
   #developers-info {
     display: flex;
     justify-content: space-around;
@@ -24,11 +33,6 @@
   #moogwol-info {
     display: grid;
   }
-  #app-features{
-  padding: 40px;
-  display: block;
-  text-align: center;
-}
   #link-to-app{
     display: block;
     text-align: center;
@@ -54,4 +58,3 @@
     display: block;
     text-align: center;
   }
-  
