@@ -11,6 +11,7 @@
  position: relative;
  display: inline-block;
  width: 50px;
+ width: fit-content;
 }
 .dropdown-content {
     display: none;
@@ -30,13 +31,13 @@
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color:white;}
 #save{
-    width: 50px;
+    width: 100%;
     font-variant: small-caps;
     border-color: white;
 }
 #load{
     height: 20px;
-    width: 50px;
+    width: auto;
     font-variant: small-caps;
     border-color: white;
 }
