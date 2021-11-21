@@ -38,6 +38,7 @@ function saveDrawing() {
     userDrawing = JSON.stringify(userDrawing)
     localStorage.setItem(drawingName, userDrawing)
     addOptionToSelector(drawingName)
+    document.querySelector('.dropbtn').innerHTML = drawingName;
 }
 
 function loadDrawing() {
@@ -54,6 +55,7 @@ function loadFromSelector(selected) {
     var dataString =  store.getItem(selected)
     json = JSON.parse(dataString)
     canvas.loadFromJSON(json)
+    document.querySelector('.dropbtn').innerHTML = selected;
 }
 
 function addOptionToSelector(optName) {
@@ -62,7 +64,7 @@ function addOptionToSelector(optName) {
      * @ param {String} the name of a drawing
      */
      
-    var sel = document.querySelector('#drawings');
+    var sel = document.querySelector('#load');
     var opt = document.createElement('option');
         opt.value = optName;
         opt.innerHTML = optName;
@@ -72,7 +74,7 @@ function addOptionToSelector(optName) {
 function populateSelector() {
     // populate the dropdown menu with the names of all of the drawings
     const storageKeys = Object.keys(localStorage); // get all the keys from local storage
-    var sel = document.querySelector('#drawings');
+    var sel = document.querySelector('#load');
 
     // Map all of the drawing names to an option in the dropdown  
     storageKeys.forEach((drawingName) => {
