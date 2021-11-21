@@ -6,16 +6,24 @@
   <script src="https://unpkg.com/fabric@4.6.0/dist/fabric.min.js"></script>
 </head>
 <body>
+  <div id="menu" class="dropdown">
+    <button class="dropbtn">Untitled</button>
+    <div class="dropdown-content">
+      <select name="drawings" onchange="loadFromSelector(this.value)" id="load">
+      <option value="" selected disabled> load</option></select>
+      <button onClick="saveDrawing()" id="save">save</button>
+    </div>
+  </div>
   <div class="workspace">
     <canvas id="canvas">
     </canvas>
     <div id="canvas-tools">
       <div id="buttons-field">
         <button type="button" onClick="canvas.clear()" class="button">start over</button>
-        <button type="button" onClick="saveDrawing()" class="button">save</button>
+        <!---<button type="button" onClick="saveDrawing()" class="button">save</button>
         <select name="drawings" onchange="loadFromSelector(this.value)" id="drawings">
           <option value="" selected disabled>load</option>
-        </select>
+        </select>-->
       </div>
       <div id="colors-field">
         <div id="picker"></div>

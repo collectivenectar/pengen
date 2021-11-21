@@ -5,7 +5,7 @@ var canvas = new fabric.Canvas("canvas", {
 var currentBrushSize = 5;
 
 var colorPicker = new iro.ColorPicker("#picker", {
-    width: 100,
+    width: 110,
     color: "#AAA"
 })
 

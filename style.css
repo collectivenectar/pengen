@@ -1,4 +1,47 @@
+.dropbtn {
+    background-color: white;
+    font-variant: small-caps;
+    color: black;
+    padding: 0px 0px 10px 5px;
+    font-size: 16px;
+    border: none;
+    
+}
+.dropdown {
+ position: relative;
+ display: inline-block;
+ width: 50px;
+}
+.dropdown-content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 0px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color:white;}
+#save{
+    width: 50px;
+    font-variant: small-caps;
+    border-color: white;
+}
+#load{
+    height: 20px;
+    width: 50px;
+    font-variant: small-caps;
+    border-color: white;
+}
 @media (orientation: landscape) {
+    
     .workspace{
         display: flex;
         flex-direction: row;
@@ -9,17 +52,16 @@
     #canvas-tools{
         display: flex;
         flex-direction: column;
-        padding: 10px;
-        justify-content: space-around;
+        width: 20%;;
+        padding: 20px;
+        justify-content: space-evenly;
         background-color: white;
         cursor: pointer;
     }
     #buttons-field{
         display: flex;
         flex-direction: column;
-        width: 110px;
-        margin-bottom: 10px;
-    
+        width: 100%;
     }
     .button{
         font-variant: small-caps;
@@ -38,15 +80,11 @@
         border-color: white;
         font-variant:small-caps;
         box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
-    
     }
     #colors-field{
-        margin-top: 10px;
-        display: block;
         grid-template-columns: 40px 40px;
     }
     #brush-size-field{
-        margin-top: 60px;
         display: block;
         transform: rotate(270deg)
     }
@@ -60,6 +98,7 @@
     }
   }
 @media (orientation: portrait){
+    
     .workspace{
         display: flex;
         flex-direction: column;
