@@ -12,10 +12,8 @@ var colorPicker = new iro.ColorPicker("#picker", {
 var hex = colorPicker.color.hexString;
 var userDrawing = {}
 
-//Setting canvas dimensions
-canvas.setHeight(400);
-canvas.setWidth(500);
-
+setCanvasDimensions()
+window.addEventListener("resize", setCanvasDimensions)
 
 //When colorPicker has been used to change color, update brush color
 colorPicker.on('color:change', function(color) {
@@ -23,7 +21,11 @@ colorPicker.on('color:change', function(color) {
     brush.color = color.hexString;
   });
 
-
+//For setting canvas dimensions dynamically
+function setCanvasDimensions(){
+    canvas.setHeight(window.innerHeight * 0.70);
+    canvas.setWidth(window.innerWidth * 0.70);
+}
 function change_brush_size(slider_value){
     //When brush size slider is used, update brush size
     var brush = canvas.freeDrawingBrush;

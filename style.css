@@ -1,60 +1,106 @@
-.workspace{
-    display: flex;
-    flex-direction: row;
-}
-#canvas{
-    box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
-}
-#canvas-tools{
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
-    background-color: white;
-    cursor: pointer;
-}
-#buttons-field{
-    display: flex;
-    flex-direction: column;
-    width: 110px;
-    margin-bottom: 10px;
-
-}
-.button{
-    font-variant: small-caps;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 5px;
-    opacity: 70%;
-    cursor: pointer;
-    background-color: white;
-    border-color: white;
-    box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
-}
-#drawings{
-    height: 30px;
-    opacity: 70%;
-    background-color: white;
-    border-color: white;
-    font-variant:small-caps;
-    box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
-
-}
-#colors-field{
-    margin-top: 10px;
-    display: block;
-    grid-template-columns: 40px 40px;
-}
-#brush-size-field{
-    margin-top: 60px;
-    display: block;
-    transform: rotate(270deg)
-}
-.slider {
-    width: 70%;
-    height: 5px;
-    border-radius: 15px;   
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    transition: opacity .2s;
+@media (orientation: landscape) {
+    .workspace{
+        display: flex;
+        flex-direction: row;
+    }
+    #canvas{
+        box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    #canvas-tools{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-around;
+        background-color: white;
+        cursor: pointer;
+    }
+    #buttons-field{
+        display: flex;
+        flex-direction: column;
+        width: 110px;
+        margin-bottom: 10px;
+    
+    }
+    .button{
+        font-variant: small-caps;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 5px;
+        opacity: 70%;
+        cursor: pointer;
+        background-color: white;
+        border-color: white;
+        box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+    }
+    #drawings{
+        height: 30px;
+        opacity: 70%;
+        background-color: white;
+        border-color: white;
+        font-variant:small-caps;
+        box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+    
+    }
+    #colors-field{
+        margin-top: 10px;
+        display: block;
+        grid-template-columns: 40px 40px;
+    }
+    #brush-size-field{
+        margin-top: 60px;
+        display: block;
+        transform: rotate(270deg)
+    }
+    .slider {
+        width: 70%;
+        height: 5px;  
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity .2s;
+    }
+  }
+@media (orientation: portrait){
+    .workspace{
+        display: flex;
+        flex-direction: column;
+    }
+    #canvas{
+        box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1);
+    }
+    #canvas-tools{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+    #buttons-field{
+        display: flex;
+        flex-direction: column;
+    }
+    .button{
+        font-variant: small-caps;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 15px;
+        opacity: 70%;
+        cursor: pointer;
+        background-color: white;
+        border-color: white;
+        box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+    }
+    #drawings{
+        height: 30px;
+        opacity: 70%;
+        background-color: white;
+        border-color: white;
+        font-variant:small-caps;
+        box-shadow: 0 1px 1px rgba(0.0, 0.0, 0.0, 0.10), 0 1px 3px rgba(0.0, 0.0, 0.0, 0.40);
+    
+    }
+    .slider{
+        width: 100%;
+        height: 10px;
+    }
+    #brush-size-field{
+        transform: rotate(270deg);
+    }
 }
