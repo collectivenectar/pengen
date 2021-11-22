@@ -1,35 +1,92 @@
- #title {
-    font-size: 40px;
-    text-align: center;
-    font-color: "gray";
+#title {
+    display: block;
+    background: whitesmoke;
+    box-shadow: 0 3px 3px 0px rgb(0, 0, 0, 0.2);
+    opacity: 70%;
+    padding: 10px;
+    font-family: "Montserrat";
+    font-variant: small-caps;
   }
-  body{
-    background: url("https://cdn.pixabay.com/photo/2014/09/19/12/30/pencils-452238_1280.jpg")
+#body{
+  background: lightblue;
   }
 #description {
     font-size: 20px;
     display: block;
     text-align: center;
+    font-family: "Montserrat";
+    font-style: italic;
+    padding: 50px;
   }
-#app-features{
-  padding: 20px;
-  display: block;
-  text-align: center;
-}
 #features-list{
   display:block;
   list-style-type: none;
   text-align: center;
+  font-family: "Montserrat";
+}
+#basic-section{
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+#basic-text{
+  margin: auto;
+}
+#drawing-img{
+  width: 50%;
+  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+}
+#color-picker-section{
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+#color-picker-text{
+  margin: auto;
+}
+#colors-img{
+  width: 50%;
+  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+}
+#brush-size-section{
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+#brush-size-text{
+  margin: auto;
+}
+#brush-img{
+  width: 50%;
+  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+}
+#save-load-section{
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+#save-load-text{
+  margin: auto;
+  max-width: 200px;
+}
+#files-img{
+  width: 50%;
+  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+}
+#app-libraries{
+  font-family: "Montserrat";
+}
+#app-demo-label{
+  font-family: "Montserrat";
 }
   #developers-info {
     display: flex;
     justify-content: space-around;
+    font-family: "Montserrat";
   }
-
   #collectivenectar-info {
     display: grid;
   }
-
   #moogwol-info {
     display: grid;
   }
