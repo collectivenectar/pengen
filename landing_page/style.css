@@ -148,8 +148,32 @@
   margin: auto;
   width: 50%;
 }
+#developers-intro{
+  color: midnightblue;
+  text-align: center;
+  font-family: "Outfit";
+  padding-top: 100px;
+  font-size: 25px;
+}
 #developers-info{
   padding: 40px;
+  display: flex;
+}
+#collectivenectar-photo{
+  display: block;
+  max-width: 250px;
+  margin: auto;
+}
+#collectivenectar-bio{
+  max-width: 250px;
+}
+#moogwol-photo{
+  display: block;
+  max-width: 250px;
+  margin: auto;
+}
+#moogwol-bio{
+  max-width: 250px;
 }
 footer{
   display: block;
