@@ -84,19 +84,19 @@ async function populateSelector() {
     console.log('fetching data...');
     const URL = 'https://pengen.herokuapp.com/api/drawings'
     const response = await fetch(URL);
-    const data = response.json();
+    console.log(response.status);
+    const data = await response.json(); // must use 'await' here or it won't work
     console.log(data);
-        
-    
-    // var sel = document.querySelector('#load');
 
-    // // Map all of the drawing names to an option in the dropdown  
-    // storageKeys.forEach((drawingName) => {
-    //     var opt = document.createElement('option');
-    //     opt.value = drawingName;
-    //     opt.innerHTML = drawingName;
-    //     sel.appendChild(opt);
-    // })
+    
+    // Map all of the drawing names to an option in the dropdown  
+    let sel = document.querySelector('#load');
+    data.forEach((item) => {
+        var opt = document.createElement('option');
+        opt.value = item.title;
+        opt.innerHTML = item.title;
+        sel.appendChild(opt);
+    })
 };
 
 
