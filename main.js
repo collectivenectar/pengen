@@ -57,13 +57,20 @@ function loadDrawing() {
     }
 }
 
-function loadFromSelector(selected) {
+
+
+async function handleClickLoad(selected) {
+    // load the selected drawing from the database
     console.log(selected);
-    store = window.localStorage
-    var dataString =  store.getItem(selected)
-    json = JSON.parse(dataString)
-    canvas.loadFromJSON(json)
+    const baseURL = 'https://pengen.herokuapp.com/api/drawing?title=';
+    let URL = baseURL.concat(selected);
+    const response = await fetch(URL);
+    const data = await response.json();
+    const canvasData = data[0].dataURL;
+    console.log(canvasData);
+    canvas.loadFromJSON(canvasData);
     document.querySelector('.dropbtn').innerHTML = selected;
+
 }
 
 function addOptionToSelector(optName) {
