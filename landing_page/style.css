@@ -29,14 +29,18 @@
 #basic-section{
   display: flex;
   flex-direction: row;
-  padding: 40px;
-  border-radius: 5px;
-  border-color: midnightblue;
+  padding: 80px;
+  border-radius: 40px;
+  border-color: whitesmoke;
   border-style: double;
   background-color: #B1C4E5;
+  max-width: 700px;
+  margin: auto;
 }
 #basic-text{
+  font-size: 25px;
   margin: auto;
+  max-width: 200px;
 }
 #drawing-img{
   width: 50%;
@@ -46,14 +50,17 @@
   display: flex;
   flex-direction: row;
   padding: 40px;
+  margin-top: 100px;
 }
 #color-picker-text{
   display: block;
   border-style: double;
-  border-radius: 4px;
-  padding: 20px;
+  border-radius: 40px;
+  border-color: whitesmoke;
+  padding: 80px;
   margin: auto;
   background-color: #B1C4E5;
+  font-size: 25px;
   
 }
 #colors-img{
@@ -69,10 +76,12 @@
 #brush-size-text{
   display: block;
   border-style: double;
-  border-radius: 4px;
-  padding: 20px;
+  border-radius: 40px;
+  border-color: whitesmoke;
+  padding: 80px;
   margin: auto;
   background-color: #B1C4E5;
+  font-size: 25px;
 }
 #brush-img{
   width: 50%;
@@ -87,11 +96,13 @@
 #save-load-text{
   display: block;
   border-style: double;
-  border-radius: 4px;
-  padding: 20px;
+  border-radius: 40px;
+  border-color: whitesmoke;
+  padding: 40px;
   margin: auto;
-  max-width: 200px;
+  max-width: 400px;
   background-color: #B1C4E5;
+  font-size: 25px;
 }
 #files-img{
   width: 50%;
@@ -115,7 +126,11 @@
   text-align: center;
   border: solid;
   border-radius: 25px;
-  background-color: #B1C4EF;
+  padding: 40px;
+  font-size: 25px;
+  color: #B1C4EF;
+  background-color: midnightblue;
+  opacity: 80%;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 #app-libraries{
@@ -128,9 +143,10 @@
   display: block;
   text-align: center;
 }
-#embedded-tutorial{
+#tutorial{
   display: block;
   margin: auto;
+  width: 50%;
 }
 #developers-info{
   padding: 40px;
@@ -139,4 +155,3 @@ footer{
   display: block;
   text-align: center;
 }
-
