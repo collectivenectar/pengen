@@ -1,40 +1,46 @@
 #title {
-    display: block;
-    background: whitesmoke;
-    box-shadow: 0 3px 3px 0px rgb(0, 0, 0, 0.2);
-    opacity: 70%;
-    padding: 10px;
-    font-family: "Montserrat";
-    font-variant: small-caps;
-  }
-#body{
-  background: lightblue;
-  }
-#description {
-    font-size: 20px;
-    display: block;
-    text-align: center;
-    font-family: "Montserrat";
-    font-style: italic;
-    padding: 50px;
-  }
-#features-list{
-  display:block;
-  list-style-type: none;
-  text-align: center;
+  display: block;
+  background:midnightblue;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  opacity: 70%;
+  padding: 10px;
   font-family: "Montserrat";
+  color: whitesmoke;
+  font-variant: small-caps;
+}
+.colored-text{
+  font-family: "Outfit";
+  font-variant: small-caps;
+  color: midnightblue;
+  padding: 10px;
+}
+#body{
+  background: whitesmoke;
+}
+#description {
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  padding: 50px;
+  color: midnightblue;
+  background-color: whitesmoke;
+  margin-bottom: 20px;
 }
 #basic-section{
   display: flex;
   flex-direction: row;
   padding: 40px;
+  border-radius: 5px;
+  border-color: midnightblue;
+  border-style: double;
+  background-color: #B1C4E5;
 }
 #basic-text{
   margin: auto;
 }
 #drawing-img{
   width: 50%;
-  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
 }
 #color-picker-section{
   display: flex;
@@ -42,11 +48,18 @@
   padding: 40px;
 }
 #color-picker-text{
+  display: block;
+  border-style: double;
+  border-radius: 4px;
+  padding: 20px;
   margin: auto;
+  background-color: #B1C4E5;
+  
 }
 #colors-img{
   width: 50%;
-  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
 #brush-size-section{
   display: flex;
@@ -54,11 +67,17 @@
   padding: 40px;
 }
 #brush-size-text{
+  display: block;
+  border-style: double;
+  border-radius: 4px;
+  padding: 20px;
   margin: auto;
+  background-color: #B1C4E5;
 }
 #brush-img{
   width: 50%;
-  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
 #save-load-section{
   display: flex;
@@ -66,52 +85,58 @@
   padding: 40px;
 }
 #save-load-text{
+  display: block;
+  border-style: double;
+  border-radius: 4px;
+  padding: 20px;
   margin: auto;
   max-width: 200px;
+  background-color: #B1C4E5;
 }
 #files-img{
   width: 50%;
-  box-shadow: 0 6px 6px 6px rgb(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
-#app-libraries{
-  font-family: "Montserrat";
+#developers-info {
+  display: flex;
+  justify-content: space-around;
 }
-#app-demo-label{
-  font-family: "Montserrat";
+#collectivenectar-info {
+  display: grid;
 }
-  #developers-info {
-    display: flex;
-    justify-content: space-around;
-    font-family: "Montserrat";
-  }
-  #collectivenectar-info {
-    display: grid;
-  }
-  #moogwol-info {
-    display: grid;
-  }
-  #link-to-app{
-    display: block;
-    text-align: center;
-  }
+#moogwol-info {
+  display: grid;
+}
+#link-to-app{
+  width: 200px;
+  display: block;
+  margin: auto;
+  text-align: center;
+  border: solid;
+  border-radius: 25px;
+  background-color: #B1C4EF;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
 #app-libraries{
   padding: 40px;
   display: block;
   text-align: center;
 }
-  #app-demo-label{
-    padding: 40px;
-    display: block;
-    text-align: center;
-  }
-  #embedded-tutorial{
-    display: block;
-    margin: auto;
-  }
-  #developers-info{
-    padding: 40px;
-  }
-  footer{
-    display: block;
-    text-align: center;
-  }
+#app-demo-label{
+  padding: 40px;
+  display: block;
+  text-align: center;
+}
+#embedded-tutorial{
+  display: block;
+  margin: auto;
+}
+#developers-info{
+  padding: 40px;
+}
+footer{
+  display: block;
+  text-align: center;
+}
+
