@@ -57,13 +57,20 @@ function loadDrawing() {
     }
 }
 
-function loadFromSelector(selected) {
+
+
+async function handleClickLoad(selected) {
+    // load the selected drawing from the database
     console.log(selected);
-    store = window.localStorage
-    var dataString =  store.getItem(selected)
-    json = JSON.parse(dataString)
-    canvas.loadFromJSON(json)
+    const baseURL = 'https://pengen.herokuapp.com/api/drawing?title=';
+    let URL = baseURL.concat(selected);
+    const response = await fetch(URL);
+    const data = await response.json();
+    const canvasData = data[0].dataURL;
+    console.log(canvasData);
+    canvas.loadFromJSON(canvasData);
     document.querySelector('.dropbtn').innerHTML = selected;
+
 }
 
 function addOptionToSelector(optName) {
@@ -79,16 +86,22 @@ function addOptionToSelector(optName) {
         sel.appendChild(opt);
 }
 
-function populateSelector() {
+async function populateSelector() {
     // populate the dropdown menu with the names of all of the drawings
-    const storageKeys = Object.keys(localStorage); // get all the keys from local storage
-    var sel = document.querySelector('#load');
+    console.log('fetching data...');
+    const URL = 'https://pengen.herokuapp.com/api/drawings'
+    const response = await fetch(URL);
+    console.log(response.status);
+    const data = await response.json(); // must use 'await' here or it won't work
+    console.log(data);
 
+    
     // Map all of the drawing names to an option in the dropdown  
-    storageKeys.forEach((drawingName) => {
+    let sel = document.querySelector('#load');
+    data.forEach((item) => {
         var opt = document.createElement('option');
-        opt.value = drawingName;
-        opt.innerHTML = drawingName;
+        opt.value = item.title;
+        opt.innerHTML = item.title;
         sel.appendChild(opt);
     })
 };
