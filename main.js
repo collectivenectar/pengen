@@ -79,18 +79,24 @@ function addOptionToSelector(optName) {
         sel.appendChild(opt);
 }
 
-function populateSelector() {
+async function populateSelector() {
     // populate the dropdown menu with the names of all of the drawings
-    const storageKeys = Object.keys(localStorage); // get all the keys from local storage
-    var sel = document.querySelector('#load');
+    console.log('fetching data...');
+    const URL = 'https://pengen.herokuapp.com/api/drawings'
+    const response = await fetch(URL);
+    const data = response.json();
+    console.log(data);
+        
+    
+    // var sel = document.querySelector('#load');
 
-    // Map all of the drawing names to an option in the dropdown  
-    storageKeys.forEach((drawingName) => {
-        var opt = document.createElement('option');
-        opt.value = drawingName;
-        opt.innerHTML = drawingName;
-        sel.appendChild(opt);
-    })
+    // // Map all of the drawing names to an option in the dropdown  
+    // storageKeys.forEach((drawingName) => {
+    //     var opt = document.createElement('option');
+    //     opt.value = drawingName;
+    //     opt.innerHTML = drawingName;
+    //     sel.appendChild(opt);
+    // })
 };
 
 
