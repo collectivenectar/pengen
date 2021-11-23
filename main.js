@@ -1,19 +1,24 @@
+// fabric.js initialization for free drawing
 var canvas = new fabric.Canvas("canvas", {
     isDrawingMode: true
 });
 
+// Storing brush width as it's changed dynamically
 var currentBrushSize = 5;
 
+// initializing the iro.js ColorPicker object
 var colorPicker = new iro.ColorPicker("#picker", {
     width: 110,
     color: "#AAA"
 })
 
-var hex = colorPicker.color.hexString;
 var userDrawing = {}
+// checking the window orientation based on ratio, not device orientation
 var mqportrait = window.matchMedia( "(orientation: portrait)" );
 
+// at runtime, set the canvas size correlated to browser window size
 setCanvasDimensions()
+// if the window is resized after initialization
 window.addEventListener("resize", setCanvasDimensions)
 
 //When colorPicker has been used to change color, update brush color
@@ -34,8 +39,8 @@ function setCanvasDimensions(){
         canvas.setWidth(window.innerWidth * 0.70);
     }
 }
+// called by the range slider to adjust the brush size
 function change_brush_size(slider_value){
-    //When brush size slider is used, update brush size
     var brush = canvas.freeDrawingBrush;
     brush.width = parseInt(slider_value, 10) || 1;
 }
