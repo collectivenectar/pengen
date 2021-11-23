@@ -73,6 +73,38 @@ async function handleClickLoad(selected) {
 
 }
 
+async function handleClickSave() {
+    const url = 'https://pengen.herokuapp.com/api/drawings'; // url for heroku app
+    const drawingName = prompt('Give your picture a name');
+
+    if (drawingName != null) {
+        let userDrawing = canvas.toJSON();
+        userDrawing = JSON.stringify(userDrawing)
+
+        let data = {
+            'title': drawingName,
+            'dataURL': userDrawing
+        }
+
+        const json = JSON.stringify(data)
+
+        const response = await fetch(url, {
+            method: 'POST',
+            // mode: 'no-cors',
+            'Access-Control-Allow-Origin': '*',
+            credentials: 'same-origin',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: json,
+        });
+        document.querySelector('.dropbtn').innerHTML = drawingName;
+        addOptionToSelector(drawingName);
+    }
+       
+    
+}
+
 function addOptionToSelector(optName) {
     /**
      * add a single option to the dropdown menu
