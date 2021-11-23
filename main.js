@@ -73,6 +73,16 @@ async function handleClickLoad(selected) {
 
 }
 
+async function handleClickSave() {
+    console.log('clicked');
+    // const drawingName = prompt('Give your picture a name');
+    // var userDrawing = canvas.toJSON();
+    // userDrawing = JSON.stringify(userDrawing)
+    // localStorage.setItem(drawingName, userDrawing)
+    // addOptionToSelector(drawingName)
+    // document.querySelector('.dropbtn').innerHTML = drawingName;
+}
+
 function addOptionToSelector(optName) {
     /**
      * add a single option to the dropdown menu
