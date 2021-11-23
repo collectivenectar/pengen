@@ -45,6 +45,7 @@
 }
 #drawing-img{
   width: 50%;
+  aspect-ratio: auto;
   border-radius: 5px;
 }
 #color-picker-section{
@@ -66,6 +67,7 @@
 }
 #colors-img{
   width: 50%;
+  aspect-ratio: auto;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
@@ -86,6 +88,7 @@
 }
 #brush-img{
   width: 50%;
+  aspect-ratio: auto;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
@@ -107,6 +110,7 @@
 }
 #files-img{
   width: 50%;
+  aspect-ratio: auto;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
 }
